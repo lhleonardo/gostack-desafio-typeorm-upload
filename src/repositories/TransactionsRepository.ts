@@ -15,8 +15,8 @@ class TransactionsRepository extends Repository<Transaction> {
 
     const transactions = await this.find();
 
-    let income = 0;
-    let outcome = 0;
+    let income = 0.0;
+    let outcome = 0.0;
 
     transactions.forEach(transaction => {
       if (transaction.type === 'income') {

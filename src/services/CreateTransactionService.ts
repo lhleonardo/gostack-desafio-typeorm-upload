@@ -29,7 +29,7 @@ class CreateTransactionService {
 
     const { total } = await transactionRepository.getBalance();
 
-    if (type === 'outcome' && value < total) {
+    if (type === 'outcome' && value > total) {
       throw new AppError('Not enought money');
     }
 

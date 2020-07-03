@@ -20,7 +20,7 @@ class Transaction {
   @Column({ type: 'enum', enum: ['income', 'outcome'] })
   type: 'income' | 'outcome';
 
-  @Column('decimal')
+  @Column('float')
   value: number;
 
   @ManyToOne(() => Category)
