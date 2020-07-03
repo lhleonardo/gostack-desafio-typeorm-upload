@@ -20,7 +20,7 @@ export default class CreateTransactions1593719843061
             default: 'uuid_generate_v4()',
           },
           { name: 'title', type: 'varchar' },
-          { name: 'value', type: 'decimal', precision: 5, scale: 2 },
+          { name: 'value', type: 'numeric', precision: 15, scale: 2 },
           { name: 'type', type: 'enum', enum: ['income', 'outcome'] },
           { name: 'category_id', type: 'uuid' },
 
